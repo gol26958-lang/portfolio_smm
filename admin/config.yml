@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ВАШ_ГИТХАБ_ЛОГИН/ИМЯ_РЕПОЗИТОРИЯ
+  repo: repo: gol26958-lang/portfolio_smm
   branch: main
 
 media_folder: "images/uploads"
