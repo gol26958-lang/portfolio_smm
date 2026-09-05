@@ -1,0 +1,39 @@
+backend:
+  name: github
+  repo: ВАШ_ГИТХАБ_ЛОГИН/ИМЯ_РЕПОЗИТОРИЯ
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Главная страница"
+    files:
+      - file: "content/home.json"
+        label: "Тексты главного экрана"
+        name: "home"
+        fields:
+          - { name: hero_title, label: "Главный заголовок", widget: string, default: "Соцсети, которые работают на бизнес" }
+          - { name: hero_subtitle, label: "Описание под заголовком", widget: text, default: "Создаю контент и стратегии для брендов, которым нужны продажи." }
+          - { name: telegram_link, label: "Ссылка на ваш Telegram (https://t.me...)", widget: string, default: "https://t.meyour_username" }
+
+  - name: "cases"
+    label: "Кейсы и Портфолио"
+    folder: "content/cases"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: "Название проекта / Бренда", widget: string }
+      - { name: tag, label: "Категория (например: SMM / Регрессия / Визуал)", widget: string }
+      - { name: description, label: "Описание результатов (что было сделано)", widget: text }
+      - { name: image, label: "Обложка / Фото кейса", widget: image, required: false }
+
+  - name: "services"
+    label: "Услуги и Цены"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: "Название услуги", widget: string }
+      - { name: description, label: "Что входит в услугу", widget: text }
